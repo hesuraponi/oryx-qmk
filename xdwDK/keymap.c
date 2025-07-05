@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,         KC_Q,           MT(MOD_LGUI, KC_W),KC_F,           KC_P,           KC_B,                                           KC_J,           KC_L,           KC_U,           MT(MOD_LGUI, KC_Y),KC_MINUS,       KC_DELETE,      
     KC_ESCAPE,      MT(MOD_RALT, KC_A),MT(MOD_LALT, KC_R),KC_S,           LT(2, KC_T),    KC_G,                                           KC_M,           LT(5, KC_N),    KC_E,           MT(MOD_LALT, KC_I),MT(MOD_RALT, KC_O),KC_QUOTE,       
     KC_BSLS,        KC_Z,           KC_X,           KC_C,           LT(3, KC_D),    KC_V,                                           KC_K,           LT(4, KC_H),    KC_COMMA,       KC_DOT,         KC_DQUO,        KC_SLASH,       
-                                                    KC_NO,          LT(2, KC_BSPC),                                 LT(1, KC_ENTER),MT(MOD_RCTL, KC_SPACE)
+                                                MT(MOD_LSFT, QK_REPEAT_KEY),          LT(2, KC_BSPC),                                 LT(1, KC_ENTER),MT(MOD_RCTL, KC_SPACE)
   ),
   [1] = LAYOUT_voyager(
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
@@ -129,6 +129,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_1:
     if (record->event.pressed) {
       SEND_STRING(SS_TAP(X_MINUS)SS_DELAY(5)  SS_TAP(X_SPACE)SS_DELAY(5)  SS_TAP(X_1));
+    }
+    break;
+    
+    case MT(MOD_LSFT, QK_REPEAT_KEY):
+    if (record->tap.count && record->event.pressed) {
+        tap_code16(QK_REPEAT_KEY);
+        return false;
     }
     break;
 
