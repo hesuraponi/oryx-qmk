@@ -134,7 +134,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     
     case SFT_T(QK_REP):
     if (record->tap.count && record->event.pressed) {
-        tap_code16(QK_REP);
+        repeat_key_invoke(&record->event);
         return false;
     }
     break;
