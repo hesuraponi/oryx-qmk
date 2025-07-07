@@ -104,19 +104,25 @@ combo_t key_combos[COMBO_COUNT] = {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case SFT_T(QK_REP):
+            return g_tapping_term -75;
         case LT(2, KC_BSPC):
-            return g_tapping_term -100;
+            return g_tapping_term -50;
         case LT(1, KC_ENTER):
             return g_tapping_term -50;
         case MT(MOD_RCTL, KC_SPACE):
-            return g_tapping_term -50;
-        case KC_SPACE:
             return g_tapping_term -50;
         default:
             return g_tapping_term;
     }
 }
 
+const key_override_t key_override_test = ko_make_basic(MOD_MASK_SHIFT, KC_DQUO, KC_EXLM);
+
+// This globally defines all key overrides to be used
+const key_override_t *key_overrides[] = {
+	&key_override_test
+};
 
 bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
   switch (keycode) {
