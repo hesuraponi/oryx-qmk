@@ -27,12 +27,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     TD(DANCE_0),    KC_UP,          KC_LEFT,        KC_RIGHT,       KC_DOWN,        TD(DANCE_1),                                    LCTL(KC_Z),     LCTL(KC_X),     LCTL(KC_C),     LCTL(KC_V),     TD(DANCE_2),    LALT(KC_SPACE), 
     KC_TAB,         KC_Q,           MT(MOD_LGUI, KC_W),KC_F,           KC_P,           KC_B,                                           KC_J,           KC_L,           KC_U,           MT(MOD_LGUI, KC_Y),KC_MINUS,       KC_DELETE,      
-    KC_ESCAPE,      MT(MOD_RALT, KC_A),MT(MOD_LALT, KC_R),KC_S,           LT(2, KC_T),    KC_G,                                           KC_M,           LT(5, KC_N),    KC_E,           MT(MOD_LALT, KC_I),MT(MOD_RALT, KC_O),KC_QUOTE,       
-    KC_BSLS,        KC_Z,           KC_X,           KC_C,           LT(3, KC_D),    KC_V,                                           KC_K,           LT(4, KC_H),    KC_COMMA,       KC_DOT,         KC_DQUO,        KC_SLASH,       
+    KC_ESCAPE,      MT(MOD_RALT, KC_A),MT(MOD_LALT, KC_R),KC_S,           LT(3, KC_T),    KC_G,                                           KC_M,           LT(5, KC_N),    KC_E,           MT(MOD_LALT, KC_I),MT(MOD_RALT, KC_O),KC_QUOTE,       
+    KC_BSLS,        KC_Z,           KC_X,           KC_C,           KC_D,    KC_V,                                           KC_K,           LT(4, KC_H),    KC_COMMA,       KC_DOT,         KC_DQUO,        KC_SLASH,       
                                                 SFT_T(QK_REP),          LT(2, KC_BSPC),                                 LT(1, KC_ENTER),MT(MOD_RCTL, KC_SPACE)
-    KC_ESCAPE,      MT(MOD_RALT, KC_A),MT(MOD_LALT, KC_R),KC_S,           LT(3, KC_T),    KC_G,                                           KC_M,           LT(4, KC_N),    KC_E,           MT(MOD_LALT, KC_I),MT(MOD_RALT, KC_O),KC_QUOTE,       
-    KC_BSLS,        KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           KC_K,           LT(5, KC_H),    KC_COMMA,       KC_DOT,         KC_DQUO,        KC_SLASH,       
-                                                    KC_NO,          LT(2, KC_BSPC),                                 LT(1, KC_ENTER),MT(MOD_RCTL, KC_SPACE)
   ),
   [1] = LAYOUT_voyager(
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
