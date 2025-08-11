@@ -117,12 +117,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
-const key_override_t key_override_test = ko_make_basic(MOD_MASK_SHIFT, KC_DQUO, KC_EXLM);
-
-// This globally defines all key overrides to be used
-const key_override_t *key_overrides[] = {
-	&key_override_test
-};
 
 bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
   switch (keycode) {
