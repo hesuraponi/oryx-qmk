@@ -2,7 +2,7 @@
 #define TAPPING_TERM 250
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "xdwDK/VqadqY"
+#define SERIAL_NUMBER "xdwDK/gaqVQw"
 #define LAYER_STATE_16BIT
 #define COMBO_COUNT 4
 
